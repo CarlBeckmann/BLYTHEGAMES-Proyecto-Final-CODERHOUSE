@@ -1,0 +1,60 @@
+/*Desktop*/
+
+@media (min-width: 1400px) {
+  nav,
+  .wrapper,
+  .footer-content,
+  .presentacion {
+    width: 60%;
+    margin: auto;
+  }
+}
+
+/*Ipad*/
+
+@media (max-width: 975px) {
+  .presentacion,
+  .consolas {
+    flex-direction: column;
+  }
+
+  .presentacion div {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  nav {
+    .nav {
+      height: 35px;
+      display: block;
+    }
+  }
+
+  .wrapper {
+    background-color: #fff;
+    padding-top: 100px;
+    padding-bottom: 75%;
+  }
+}
+
+/*iphone*/
+
+@media (max-width: 655px) {
+  .nav {
+    @include caja-flex(space-between, center, nowrap);
+    margin-bottom: 50px;
+  }
+  .presentacion div {
+    text-align: center;
+    margin-bottom: 30px;
+    h1,
+    p {
+      padding: 0;
+    }
+  }
+  .wrapper {
+    background-color: #fff;
+    padding-top: 100px;
+    padding-bottom: 275%;
+  }
+}

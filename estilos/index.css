@@ -1,15 +1,24 @@
-@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap");
+/*Global*/
 @import url("https://fonts.googleapis.com/css?family=Oswald:300,400,500|PT+Sans+Narrow:400,700|Play:400,700|Ubuntu+Condensed&display=swap&subset=cyrillic");
-* {
-  margin: 0;
-  padding: 0;
+html {
+  font-size: 62.5%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
 
-/*Background*/
-html,
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
 body {
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  font-family: "Noto Sans JP", sans-serif;
   background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
   background-size: 400% 400%;
   -webkit-animation: gradient 15s ease infinite;
@@ -41,22 +50,119 @@ body {
   }
 }
 
-/*nav*/
+img {
+  width: 80%;
+  height: auto;
+}
+
+.servicios,
+.presentacion,
+.footer-content {
+  width: 80%;
+  margin: auto;
+}
+
+.titulo-servicios,
+.presentacion {
+  margin-bottom: 10%;
+}
+
+/*Variable*/
+p {
+  font-size: 1.8rem;
+  color: white;
+}
+
+h2 {
+  font-size: 2.4rem;
+}
+
+h3 {
+  font-size: 2rem;
+  font-weight: lighter;
+}
+
+.btn, .btn-principal, .btn-secundario {
+  border: none;
+  border-radius: 2px;
+  padding: 0.7em 1.5em;
+  cursor: pointer;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+  font-weight: 500;
+  -webkit-transition: -webkit-transform 100ms;
+  transition: -webkit-transform 100ms;
+  transition: transform 100ms;
+  transition: transform 100ms, -webkit-transform 100ms;
+}
+
+.btn:hover, .btn-principal:hover, .btn-secundario:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.btn-principal {
+  color: #fff;
+  background-color: #6495ed;
+}
+
+.btn-secundario {
+  background-color: #868484;
+}
+
+/*Mixin*/
+/*Funciones*/
+.ejemplo {
+  font-size: 55px;
+}
+
+header {
+  top: 0;
+  border-top: 30px solid black;
+  width: 100%;
+}
+
+/*Blythe*/
+.logo {
+  color: #000000;
+  font-size: 30px;
+  font-weight: bold;
+  font-family: monospace;
+  letter-spacing: 7px;
+  text-align: center;
+}
+
+.logo span {
+  -webkit-transition: 0.5s linear;
+  transition: 0.5s linear;
+}
+
+.logo span:hover {
+  margin-bottom: 5px;
+  color: crimson;
+  text-shadow: 0 0 10px #e73c7e, 0 0 20px blueviolet, 0 0 40px #e73c7e;
+}
+
+/*Navlist*/
 ul,
 li {
   list-style: none;
 }
 
 .navlist {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  height: 100%;
-  width: 100%;
-  min-width: 480px;
-  padding: 0 40px;
-  margin-top: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  padding-top: 20px;
 }
 
 .nav {
@@ -133,54 +239,54 @@ li {
   white-space: nowrap;
 }
 
-@media all and (max-width: 1000px) {
-  .nav {
-    height: 35px;
-    display: block;
-  }
-}
-
-@media all and (max-width: 710px) {
-  .nav {
-    height: 30px;
-    display: block;
-  }
-}
-
 /*index*/
-h1 {
-  color: #000000;
-  font-size: 50px;
-  font-weight: bold;
-  font-family: monospace;
-  letter-spacing: 7px;
+.presentacion {
+  padding-top: 100px;
+  padding-bottom: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+
+.presentacion .flex-item2 {
   text-align: center;
 }
 
-h1 span {
-  -webkit-transition: 0.5s linear;
-  transition: 0.5s linear;
+.presentacion h1 {
+  margin-top: 0;
+  padding-right: 20px;
+  font-size: 3rem;
 }
 
-h1:hover span {
-  margin-bottom: 5px;
+.presentacion p {
+  padding-right: 20px;
+  padding-bottom: 10px;
 }
 
-h1:hover span {
-  margin-bottom: 30px;
+.wrapper {
+  background-color: #fff;
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 
-h1:hover span {
-  color: crimson;
-  text-shadow: 0 0 10px #e73c7e, 0 0 20px blueviolet, 0 0 40px #e73c7e;
+.wrapper .consolas div {
+  text-align: center;
 }
 
-.conatinerindex {
+.wrapper .consolas .conatinerindex {
   width: 100%;
   height: 500px;
 }
 
-.posicionindex {
+.wrapper .consolas .posicionindex {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -198,7 +304,7 @@ h1:hover span {
   flex-direction: row;
 }
 
-.caja {
+.wrapper .consolas .caja {
   margin: 10px;
   width: 300px;
   height: 490px;
@@ -210,13 +316,7 @@ h1:hover span {
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
 }
 
-.caja:hover {
-  margin-bottom: -10px;
-  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
-}
-
-.caja h1 {
+.wrapper .consolas .caja h1 {
   color: #fff;
   padding: 30px;
   margin-top: 100px;
@@ -228,46 +328,118 @@ h1:hover span {
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
 }
 
-.texto h4 {
-  color: white;
-  font-weight: 300;
+.wrapper .consolas .caja:hover {
+  margin-bottom: -10px;
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+}
+
+.wrapper .consolas .texto h4 {
+  color: black;
   text-align: center;
+  font-weight: bold;
+  font-family: monospace;
   letter-spacing: 3px;
   text-shadow: 0 0 3px rgba(255, 255, 255, 0.9);
+  font-size: x-large;
 }
 
-.uno {
-  background-image: url("Imagenes/NintendoSwitch.jpg");
+.wrapper .consolas .uno {
+  background: url("/imagenes/NintendoSwitch.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
 
-.dos {
-  background: url("Imagenes/PlayStation.jpg");
+.wrapper .consolas .dos {
+  background: url("/imagenes/PlayStation.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
 
-.tres {
-  background: url("Imagenes/XboxX.jpg");
+.wrapper .consolas .tres {
+  background: url("/imagenes/XboxX.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
 
-/*Footer*/
-.footer {
-  background-color: #23d5ab;
-  bottom: 0px;
-  width: 100%;
-  padding: 20px 0px;
-  position: absolute;
+footer {
+  min-height: 80px;
+  background-color: black;
+  margin-top: 0;
 }
 
-/*Consolas*/
-/*Proximos Juegos*/
-/*Productos*/
-/*Reseñas*/
+footer .footer-content {
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+/*Desktop*/
+@media (min-width: 1400px) {
+  nav,
+  .wrapper,
+  .footer-content,
+  .presentacion {
+    width: 60%;
+    margin: auto;
+  }
+}
+
+/*Ipad*/
+@media (max-width: 975px) {
+  .presentacion,
+  .consolas {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .presentacion div {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  nav .nav {
+    height: 35px;
+    display: block;
+  }
+  .wrapper {
+    background-color: #fff;
+    padding-top: 100px;
+    padding-bottom: 75%;
+  }
+}
+
+/*iphone*/
+@media (max-width: 655px) {
+  .nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    margin-bottom: 50px;
+  }
+  .presentacion div {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .presentacion div h1,
+  .presentacion div p {
+    padding: 0;
+  }
+  .wrapper {
+    background-color: #fff;
+    padding-top: 100px;
+    padding-bottom: 275%;
+  }
+}
 /*# sourceMappingURL=index.css.map */
