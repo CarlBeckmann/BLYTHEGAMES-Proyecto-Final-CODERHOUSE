@@ -55,6 +55,11 @@ img {
   height: auto;
 }
 
+a {
+  text-decoration: none;
+  color: black;
+}
+
 .servicios,
 .presentacion,
 .footer-content {
@@ -345,22 +350,19 @@ li {
 }
 
 .wrapper .consolas .uno {
-  background: url("/imagenes/NintendoSwitch.jpg");
-  background-repeat: no-repeat;
+  background-image: url("../imagenes/NintendoSwitch.jpg");
   background-size: cover;
   background-position: center;
 }
 
 .wrapper .consolas .dos {
-  background: url("/imagenes/PlayStation.jpg");
-  background-repeat: no-repeat;
+  background-image: url("../imagenes/PlayStation.jpg");
   background-size: cover;
   background-position: center;
 }
 
 .wrapper .consolas .tres {
-  background: url("/imagenes/XboxX.jpg");
-  background-repeat: no-repeat;
+  background-image: url("../imagenes/XboxX.jpg");
   background-size: cover;
   background-position: center;
 }
@@ -375,6 +377,29 @@ footer .footer-content {
   text-align: center;
   padding-top: 30px;
   padding-bottom: 30px;
+}
+
+footer div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style: none;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+footer div img {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 20px;
 }
 
 /*Desktop*/

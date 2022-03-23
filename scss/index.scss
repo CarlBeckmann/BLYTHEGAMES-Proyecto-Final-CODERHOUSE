@@ -186,21 +186,18 @@ li {
     }
 
     .uno {
-      background: url("/imagenes/NintendoSwitch.jpg");
-      background-repeat: no-repeat;
+      background-image: url("../imagenes/NintendoSwitch.jpg");
       background-size: cover;
       background-position: center;
     }
 
     .dos {
-      background: url("/imagenes/PlayStation.jpg");
-      background-repeat: no-repeat;
+      background-image: url("../imagenes/PlayStation.jpg");
       background-size: cover;
       background-position: center;
     }
     .tres {
-      background: url("/imagenes/XboxX.jpg");
-      background-repeat: no-repeat;
+      background-image: url("../imagenes/XboxX.jpg");
       background-size: cover;
       background-position: center;
     }
@@ -214,6 +211,20 @@ footer {
     text-align: center;
     padding-top: 30px;
     padding-bottom: 30px;
+  }
+
+  div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    list-style: none;
+    justify-content: space-evenly;
+
+    img {
+      width: 80px;
+      height: 80px;
+      margin-bottom: 20px;
+    }
   }
 }
 
