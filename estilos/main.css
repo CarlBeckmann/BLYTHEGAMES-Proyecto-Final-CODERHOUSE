@@ -18,6 +18,7 @@ body {
   margin: 0;
   padding: 0;
   line-height: 1.6;
+  text-align: center;
   font-family: "Noto Sans JP", sans-serif;
   background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
   background-size: 400% 400%;
@@ -118,10 +119,6 @@ h3 {
 
 /*Mixin*/
 /*Funciones*/
-.ejemplo {
-  font-size: 55px;
-}
-
 header {
   top: 0;
   border-top: 30px solid black;
@@ -143,7 +140,7 @@ header {
   transition: 0.5s linear;
 }
 
-.logo span:hover {
+.logo:hover {
   margin-bottom: 5px;
   color: crimson;
   text-shadow: 0 0 10px #e73c7e, 0 0 20px blueviolet, 0 0 40px #e73c7e;
@@ -246,7 +243,7 @@ li {
 
 /*index*/
 .presentacion {
-  padding-top: 100px;
+  padding-top: 30px;
   padding-bottom: 50px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -321,6 +318,12 @@ li {
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
 }
 
+.wrapper .consolas .caja:hover {
+  margin-bottom: -10px;
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+}
+
 .wrapper .consolas .caja h1 {
   color: #fff;
   padding: 30px;
@@ -331,12 +334,6 @@ li {
   background: rgba(0, 0, 0, 0.8);
   -webkit-box-shadow: 0 0 30px rgba(0, 0, 0, 0.7);
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
-}
-
-.wrapper .consolas .caja:hover {
-  margin-bottom: -10px;
-  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
 }
 
 .wrapper .consolas .texto h4 {
@@ -402,6 +399,94 @@ footer div img {
   margin-bottom: 20px;
 }
 
+/*JUEGOS*/
+.juegos {
+  padding-top: 50px;
+  padding-bottom: 75px;
+}
+
+.juegos h1 {
+  color: gold;
+  margin-top: 0;
+  padding-right: 20px;
+  font-size: 3rem;
+}
+
+.flip {
+  position: relative;
+}
+
+.flip .front,
+.flip .back {
+  display: block;
+  -webkit-transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+          transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+  -webkit-transition-property: opacity, -webkit-transform;
+  transition-property: opacity, -webkit-transform;
+  transition-property: transform, opacity;
+  transition-property: transform, opacity, -webkit-transform;
+}
+
+.flip .front {
+  -webkit-transform: rotateY(0deg);
+          transform: rotateY(0deg);
+}
+
+.flip .back {
+  position: absolute;
+  opacity: 0;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  -webkit-transform: rotateY(-180deg);
+          transform: rotateY(-180deg);
+}
+
+.flip:hover .front {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.flip:hover .back {
+  opacity: 1;
+  -webkit-transform: rotateY(0deg);
+          transform: rotateY(0deg);
+}
+
+.flip {
+  position: relative;
+  display: inline-block;
+  margin-right: 2px;
+  margin-bottom: 1em;
+  width: 400px;
+}
+
+.flip .front,
+.flip .back {
+  display: block;
+  color: white;
+  width: inherit;
+  background-size: cover !important;
+  background-position: center !important;
+  height: 220px;
+  padding: 1em 2em;
+  background: #313131;
+  border-radius: 10px;
+}
+
+.flip .front p,
+.flip .back p {
+  font-size: 1rem;
+  line-height: 160%;
+  color: #999;
+}
+
+/*PROXIMOS JUEGOS*/
+/*JUEGOS INDEPENDIENTES*/
+/*PRODUCTOS*/
 /*Desktop*/
 @media (min-width: 1400px) {
   nav,
@@ -467,4 +552,4 @@ footer div img {
     padding-bottom: 275%;
   }
 }
-/*# sourceMappingURL=index.css.map */
+/*# sourceMappingURL=main.css.map */
