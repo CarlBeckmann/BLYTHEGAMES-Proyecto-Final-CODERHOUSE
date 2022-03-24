@@ -347,19 +347,19 @@ li {
 }
 
 .wrapper .consolas .uno {
-  background-image: url("../imagenes/NintendoSwitch.jpg");
+  background-image: url("../Imagenes/NintendoSwitch.jpg");
   background-size: cover;
   background-position: center;
 }
 
 .wrapper .consolas .dos {
-  background-image: url("../imagenes/PlayStation.jpg");
+  background-image: url("../Imagenes/PlayStation.jpg");
   background-size: cover;
   background-position: center;
 }
 
 .wrapper .consolas .tres {
-  background-image: url("../imagenes/XboxX.jpg");
+  background-image: url("../Imagenes/XboxX.jpg");
   background-size: cover;
   background-position: center;
 }
