@@ -35,6 +35,17 @@
     padding-top: 100px;
     padding-bottom: 75%;
   }
+  .proximojuego {
+    display: block;
+    img {
+      height: 600px;
+      width: 400px;
+    }
+    .resumen__juego {
+      border-top: none;
+      border-bottom: 2px solid #fff;
+    }
+  }
 }
 
 /*iphone*/
@@ -42,7 +53,7 @@
 @media (max-width: 655px) {
   .nav {
     @include caja-flex(space-between, center, nowrap);
-    margin-bottom: 50px;
+    margin-bottom: 80px;
   }
   .presentacion div {
     text-align: center;
@@ -54,7 +65,11 @@
   }
   .wrapper {
     background-color: #fff;
-    padding-top: 100px;
-    padding-bottom: 275%;
+    padding-top: 120px;
+    padding-bottom: 320%;
+  }
+
+  .resumen__juego .r {
+    font-size: 15px;
   }
 }

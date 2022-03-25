@@ -243,7 +243,7 @@ li {
 
 /*index*/
 .presentacion {
-  padding-top: 30px;
+  padding-top: 55px;
   padding-bottom: 50px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -485,6 +485,46 @@ footer div img {
 }
 
 /*PROXIMOS JUEGOS*/
+.meses {
+  border-top: 4px solid black;
+}
+
+.proximojuego {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 3fr;
+      grid-template-columns: 1fr 3fr;
+  position: relative;
+}
+
+.proximojuego img {
+  height: 600;
+  width: 400;
+  padding-left: 50px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.proximojuego .resumen__juego {
+  border-top: 2px solid #fff;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 4fr;
+      grid-template-columns: 1fr 4fr;
+  grid-gap: 10px;
+  padding: 15px 0;
+}
+
+.proximojuego .resumen__juego .title {
+  font-size: 2.4rem;
+}
+
+.proximojuego .resumen__juego .story {
+  font-size: 1.8rem;
+  text-align: right;
+  padding-right: 30px;
+}
+
 /*JUEGOS INDEPENDIENTES*/
 /*PRODUCTOS*/
 /*Desktop*/
@@ -520,6 +560,17 @@ footer div img {
     padding-top: 100px;
     padding-bottom: 75%;
   }
+  .proximojuego {
+    display: block;
+  }
+  .proximojuego img {
+    height: 600px;
+    width: 400px;
+  }
+  .proximojuego .resumen__juego {
+    border-top: none;
+    border-bottom: 2px solid #fff;
+  }
 }
 
 /*iphone*/
@@ -536,7 +587,7 @@ footer div img {
             align-items: center;
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
-    margin-bottom: 50px;
+    margin-bottom: 80px;
   }
   .presentacion div {
     text-align: center;
@@ -548,8 +599,11 @@ footer div img {
   }
   .wrapper {
     background-color: #fff;
-    padding-top: 100px;
-    padding-bottom: 275%;
+    padding-top: 120px;
+    padding-bottom: 320%;
+  }
+  .resumen__juego .r {
+    font-size: 15px;
   }
 }
 /*# sourceMappingURL=main.css.map */
