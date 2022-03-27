@@ -61,7 +61,7 @@ a {
 
 /*Variable*/
 
-$font-p: 1.8rem;
+$font-p: 1.5rem;
 $font-h1: 3rem;
 $font-h2: 2.4rem;
 $font-h3: 2rem;
@@ -113,6 +113,27 @@ h3 {
   justify-content: $principal;
   align-items: $cruzado;
   flex-wrap: $wrap;
+}
+
+@mixin aspect-ratio($width, $height) {
+  position: relative;
+
+  &:before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: ($height / $width) * 100%;
+  }
+
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+  }
 }
 
 /*Funciones*/

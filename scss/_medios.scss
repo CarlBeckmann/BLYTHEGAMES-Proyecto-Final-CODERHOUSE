@@ -12,7 +12,7 @@
 
 /*Ipad*/
 
-@media (max-width: 975px) {
+@media (max-width: 820px) {
   .presentacion,
   .consolas {
     flex-direction: column;
@@ -44,6 +44,7 @@
     .resumen__juego {
       border-top: none;
       border-bottom: 2px solid #fff;
+      font-size: $font-p;
     }
   }
 }
@@ -69,7 +70,34 @@
     padding-bottom: 320%;
   }
 
-  .resumen__juego .r {
-    font-size: 15px;
+  .flip {
+    height: 100%;
+    width: 100%;
+  }
+
+  .proximojuego {
+    img {
+      height: 400px;
+      width: 300px;
+    }
+    .resumen__juego .r {
+      font-size: 15px;
+    }
+  }
+
+  .carousel__slide {
+    figure {
+      display: block;
+      margin-left: 30px;
+      margin-right: 30px;
+    }
+
+    figcaption {
+      min-width: 350px;
+    }
+  }
+  .carousel__thumbnails {
+    margin-left: 10px;
+    margin-right: 10px;
   }
 }
