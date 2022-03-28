@@ -80,7 +80,7 @@ p {
 }
 
 h2 {
-  font-size: 2.4rem;
+  font-size: 2.5rem;
 }
 
 h3 {
@@ -88,6 +88,7 @@ h3 {
   font-weight: lighter;
 }
 
+/*botones*/
 .btn, .btn-principal, .btn-secundario {
   border: none;
   border-radius: 2px;
@@ -114,7 +115,43 @@ h3 {
 }
 
 .btn-secundario {
-  background-color: #868484;
+  background-color: #ffd000;
+}
+
+/*footer*/
+footer {
+  min-height: 80px;
+  background-color: black;
+  margin-top: 0;
+}
+
+footer .footer-content {
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+footer div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style: none;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+footer div img {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 20px;
 }
 
 /*Mixin*/
@@ -364,41 +401,6 @@ li {
   background-position: center;
 }
 
-footer {
-  min-height: 80px;
-  background-color: black;
-  margin-top: 0;
-}
-
-footer .footer-content {
-  text-align: center;
-  padding-top: 30px;
-  padding-bottom: 30px;
-}
-
-footer div {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  list-style: none;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-}
-
-footer div img {
-  width: 80px;
-  height: 80px;
-  margin-bottom: 20px;
-}
-
 /*JUEGOS*/
 .juegos {
   padding-top: 50px;
@@ -516,7 +518,7 @@ footer div img {
 }
 
 .proximojuego .resumen__juego .title {
-  font-size: 2.4rem;
+  font-size: 2.5rem;
 }
 
 .proximojuego .resumen__juego .story {
@@ -724,6 +726,102 @@ footer div img {
 }
 
 /*PRODUCTOS*/
+.product-card {
+  background-color: #000000;
+  max-width: 550px;
+  min-height: 300px;
+  margin: 0 auto;
+  margin-top: 50px;
+  margin-bottom: 150px;
+  -webkit-box-shadow: 8px 12px 30px;
+          box-shadow: 8px 12px 30px;
+  color: #ffffff;
+  font-weight: normal;
+  text-align: left;
+  font-size: 1.5rem;
+  position: relative;
+}
+
+.product-details {
+  width: 53%;
+  float: left;
+  height: 100%;
+  padding: 30px;
+}
+
+.product-details h1 {
+  color: #e5ff00;
+  font-family: monospace;
+  font-size: xx-large;
+}
+
+.product-image {
+  position: absolute;
+  right: -140px;
+  top: -40px;
+}
+
+.product-image img {
+  max-width: 400px;
+}
+
+.modal-window {
+  position: fixed;
+  background-color: rgba(255, 255, 255, 0.25);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.modal-window:target {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal-window > div {
+  width: 400px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  padding: 2em;
+  background: white;
+}
+
+.modal-window header {
+  font-weight: bold;
+}
+
+.modal-window h1 {
+  font-size: large;
+  margin: 0 0 15px;
+}
+
+.modal-close {
+  color: #aaa;
+  line-height: 50px;
+  font-size: 80%;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: 0;
+  width: 70px;
+  text-decoration: none;
+}
+
+.modal-close:hover {
+  color: black;
+}
+
 /*Desktop*/
 @media (min-width: 1400px) {
   nav,
@@ -767,7 +865,10 @@ footer div img {
   .proximojuego .resumen__juego {
     border-top: none;
     border-bottom: 2px solid #fff;
-    font-size: 1.5rem;
+  }
+  .product-card {
+    margin-left: 75px;
+    margin-right: 20px;
   }
 }
 
@@ -822,6 +923,20 @@ footer div img {
   .carousel__thumbnails {
     margin-left: 10px;
     margin-right: 10px;
+  }
+  .product-card {
+    margin: 0 auto;
+    overflow: hidden;
+    margin-bottom: 50px;
+  }
+  .product-details {
+    width: 40%;
+    z-index: 1;
+  }
+  .product-image {
+    width: 75%;
+    left: 40%;
+    top: 20%;
   }
 }
 /*# sourceMappingURL=main.css.map */

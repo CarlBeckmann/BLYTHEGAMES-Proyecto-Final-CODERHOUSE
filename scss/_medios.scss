@@ -44,8 +44,11 @@
     .resumen__juego {
       border-top: none;
       border-bottom: 2px solid #fff;
-      font-size: $font-p;
     }
+  }
+  .product-card {
+    margin-left: 75px;
+    margin-right: 20px;
   }
 }
 
@@ -99,5 +102,20 @@
   .carousel__thumbnails {
     margin-left: 10px;
     margin-right: 10px;
+  }
+
+  .product-card {
+    margin: 0 auto;
+    overflow: hidden;
+    margin-bottom: 50px;
+  }
+  .product-details {
+    width: 40%;
+    z-index: 1;
+  }
+  .product-image {
+    width: 75%;
+    left: 40%;
+    top: 20%;
   }
 }
