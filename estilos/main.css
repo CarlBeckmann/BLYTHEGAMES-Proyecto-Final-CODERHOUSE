@@ -155,7 +155,6 @@ footer div img {
 }
 
 /*Mixin*/
-/*Funciones*/
 header {
   top: 0;
   border-top: 30px solid black;
@@ -373,14 +372,14 @@ li {
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
 }
 
-.wrapper .consolas .texto h4 {
+.wrapper .consolas .texto h3 {
   color: black;
   text-align: center;
   font-weight: bold;
   font-family: monospace;
   letter-spacing: 3px;
   text-shadow: 0 0 3px rgba(255, 255, 255, 0.9);
-  font-size: x-large;
+  font-size: 2rem;
 }
 
 .wrapper .consolas .uno {
@@ -502,9 +501,7 @@ li {
 .proximojuego img {
   height: 600;
   width: 400;
-  padding-left: 50px;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding: 20px 0px 20px 50px;
 }
 
 .proximojuego .resumen__juego {
@@ -746,13 +743,13 @@ li {
   width: 53%;
   float: left;
   height: 100%;
-  padding: 30px;
+  padding: 20px;
 }
 
 .product-details h1 {
   color: #e5ff00;
   font-family: monospace;
-  font-size: xx-large;
+  font-size: 3rem;
 }
 
 .product-image {
@@ -802,7 +799,7 @@ li {
 }
 
 .modal-window h1 {
-  font-size: large;
+  font-size: 3rem;
   margin: 0 0 15px;
 }
 
@@ -934,9 +931,10 @@ li {
     z-index: 1;
   }
   .product-image {
-    width: 75%;
-    left: 40%;
-    top: 20%;
+    width: 60%;
+    height: 100px;
+    left: 50%;
+    top: 10%;
   }
 }
 /*# sourceMappingURL=main.css.map */

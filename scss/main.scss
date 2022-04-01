@@ -176,14 +176,14 @@ li {
       }
     }
 
-    .texto h4 {
+    .texto h3 {
       color: rgb(0, 0, 0);
       text-align: center;
       font-weight: bold;
       font-family: monospace;
       letter-spacing: 3px;
       text-shadow: 0 0 3px rgba(255, 255, 255, 0.9);
-      font-size: x-large;
+      font-size: $font-h3;
     }
 
     .uno {
@@ -268,7 +268,7 @@ li {
     background: #313131;
     border-radius: 10px;
     p {
-      font-size: 1rem;
+      font-size: $font-p - 0.5;
       line-height: 160%;
       color: #999;
     }
@@ -288,9 +288,7 @@ li {
   img {
     height: 600;
     width: 400;
-    padding-left: 50px;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding: 20px 0px 20px 50px;
   }
   .resumen__juego {
     border-top: 2px solid #fff;
@@ -424,7 +422,6 @@ li {
   padding: 0;
   margin: 0;
   display: flex;
-
   margin: 0 -10px;
   margin-bottom: 50px;
   .carousel__slides + & {
@@ -482,11 +479,11 @@ li {
   width: 53%;
   float: left;
   height: 100%;
-  padding: 30px;
+  padding: 20px;
   h1 {
     color: rgb(229, 255, 0);
     font-family: monospace;
-    font-size: xx-large;
+    font-size: $font-p * 2;
   }
 }
 
@@ -529,7 +526,7 @@ li {
     font-weight: bold;
   }
   h1 {
-    font-size: large;
+    font-size: $font-h1;
     margin: 0 0 15px;
   }
 }

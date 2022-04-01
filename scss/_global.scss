@@ -164,21 +164,3 @@ footer {
     height: 100%;
   }
 }
-
-/*Funciones*/
-
-@function font-calc($size, $type) {
-  $font: 16;
-
-  @if $type ==h1 {
-    $font: ($size + 0.2 * $size);
-  }
-
-  @if $type ==h2 {
-    $font: ($size + 0.1 * $size);
-  } @else {
-    $font: 16;
-  }
-
-  @return $font + px;
-}
